@@ -6,6 +6,7 @@ class ModelTheme extends ChangeNotifier {
   final ThemePreferences _preferences = ThemePreferences();
   bool get isDark => _isDark;
 
+
   ModelTheme() {
     _isDark = false;
     getPreferences();
