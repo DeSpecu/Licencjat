@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:licencjat/Pages/OfertyPage.dart';
+import 'package:licencjat/Pages/ProfilPage.dart';
 import 'package:licencjat/Widgets/Dopasowanie.dart';
 import 'package:licencjat/src/theme.dart';
 import 'package:provider/provider.dart';
@@ -37,7 +38,7 @@ return Consumer<ModelTheme>(builder: (context, ModelTheme themeNotifier, child){
                 _selectedIndex = newIndex;
             });
           },
-          children: [OfertyPage()],
+          children: [OfertyPage(),const ProfilPage()],
         ),
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,

@@ -3,6 +3,7 @@ import 'package:licencjat/Pages/HomePage.dart';
 import 'package:licencjat/src/theme.dart';
 import 'package:provider/provider.dart';
 import './Pages/OfertyPage.dart';
+import './Pages/ProfilPage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
               home: HomePage(),
               routes: {
                 "/oferty": (context) => OfertyPage(),
+                "/profil" : (context) => const ProfilPage()
               },
             );
           }),
