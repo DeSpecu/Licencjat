@@ -5,7 +5,6 @@ import 'package:licencjat/src/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:html/dom.dart' as dom;
 import 'package:http/http.dart' as http;
-import 'package:pie_chart/pie_chart.dart';
 
 class ProfilPage extends StatefulWidget {
   const ProfilPage({super.key});
@@ -19,6 +18,7 @@ class _PorfilPageState extends State<ProfilPage> { // State Object
   Widget build(BuildContext context) {
     return Consumer<ModelTheme>(builder: (context, ModelTheme themeNotifier, child){
       return Scaffold(
+
         appBar: AppBar(
           title: const Text("Profil"),
           automaticallyImplyLeading: false,
@@ -41,9 +41,7 @@ class _PorfilPageState extends State<ProfilPage> { // State Object
               });
             },
           ),
-
         ),
-
       );
     });
   }
