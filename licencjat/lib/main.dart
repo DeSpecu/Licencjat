@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
                   selectedItemColor: Color.fromARGB(255, 40, 36, 33)),
                   appBarTheme: AppBarTheme(backgroundColor: Color.fromARGB(255, 224, 212, 201)),
               ),
-              home: LoginPage(),
+              home: HomePage(),
               routes: {
                 "/homepage": (context) => HomePage(),
                 "/oferty": (context) => OfertyPage(),
