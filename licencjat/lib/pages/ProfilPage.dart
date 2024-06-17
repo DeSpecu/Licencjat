@@ -3,8 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:flutter/services.dart' show rootBundle;
-import 'package:path_provider/path_provider.dart';
+import '../model/ImageModel.dart';
 
 class ProfilPage extends StatefulWidget {
   const ProfilPage({super.key});
@@ -14,21 +13,8 @@ class ProfilPage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilPage> {
 
-  Future<File> getImageFileFromAssets(String path) async {
-    final byteData = await rootBundle.load('assets/$path');
-
-    final file = File('${(await getTemporaryDirectory()).path}/$path');
-    await file.create(recursive: true);
-    await file.writeAsBytes(byteData.buffer.asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
-
-    return file;
-  }
-
-  // State Object
-
-  File? _image;
-  late Future<File> futureData = (getImageFileFromAssets('images/placeholder-img.jpg'));
   final _picker = ImagePicker();
+  File? _image;
 
   Future<void> getImage() async {
     final XFile? pickedImage = await _picker.pickImage(source: ImageSource.gallery);
@@ -38,6 +24,8 @@ class _ProfilePageState extends State<ProfilPage> {
       });
     }
   }
+
+  late Future<File> futureData = (ImageModel.getImageFileFromAssets('images/placeholder-img.jpg'));
 
   @override
   Widget build(BuildContext context) {
