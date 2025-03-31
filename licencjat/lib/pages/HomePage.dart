@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:licencjat/Pages/OfertyPage.dart';
 import 'package:licencjat/Pages/ProfilPage.dart';
 import 'package:licencjat/Widgets/Dopasowanie.dart';
-import 'package:licencjat/src/theme.dart';
+import 'package:licencjat/model/theme.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {

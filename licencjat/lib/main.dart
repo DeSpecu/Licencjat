@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:licencjat/Pages/HomePage.dart';
-import 'package:licencjat/src/theme.dart';
+import 'package:licencjat/model/theme.dart';
 import 'package:provider/provider.dart';
 import './Pages/OfertyPage.dart';
 import './Pages/ProfilPage.dart';
@@ -32,12 +32,12 @@ class MyApp extends StatelessWidget {
                 brightness: Brightness.dark,
               )
                   : ThemeData(
-                  scaffoldBackgroundColor: const Color.fromARGB(255, 224, 212, 201),
-                  cardTheme: CardTheme(color: Color.fromARGB(255, 224, 212, 201)),
+                  scaffoldBackgroundColor: const Color.fromARGB(255,255,255,255),
+                  cardTheme: CardTheme(color: Color.fromARGB(255,255,255,255)),
                   brightness: Brightness.light,
-                  bottomNavigationBarTheme: BottomNavigationBarThemeData(backgroundColor: Color.fromARGB(255, 157, 148, 141),
-                  selectedItemColor: Color.fromARGB(255, 40, 36, 33)),
-                  appBarTheme: AppBarTheme(backgroundColor: Color.fromARGB(255, 224, 212, 201)),
+                  bottomNavigationBarTheme: BottomNavigationBarThemeData(backgroundColor: Color.fromARGB(255,255,255,255),
+                  selectedItemColor: Color.fromARGB(255, 0, 0, 0)),
+                  appBarTheme: AppBarTheme(backgroundColor: Color.fromARGB(0,0,0,255)),
               ),
               home: HomePage(),
               routes: {

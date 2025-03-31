@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:licencjat/src/theme.dart';
+import 'package:licencjat/model/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:pie_chart/pie_chart.dart';
 import '../model/Oferty.dart';
@@ -26,7 +26,11 @@ class OfertyPage extends StatelessWidget {
             actions: [IconButton(onPressed: () {
               themeNotifier.isDark ? themeNotifier.isDark = false : themeNotifier.isDark = true;
               },
-                icon: Icon(themeNotifier.isDark ? Icons.sunny : Icons.dark_mode))
+                icon: Icon(themeNotifier.isDark ? Icons.sunny : Icons.dark_mode)),
+              IconButton(onPressed: () {
+                themeNotifier.isDark ? themeNotifier.isDark = false : themeNotifier.isDark = true;
+              },
+                  icon: Icon(themeNotifier.isDark ? Icons.sunny : Icons.dark_mode))
             ],
           ),
         body: Center(
